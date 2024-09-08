@@ -21,6 +21,10 @@ Route::resource('note', NoteController::class);
 Route::get('/', function () {
     return view('pages.client.home');
 });
+Route::get('/home', function () {
+    return view('pages.client.home');
+});
+
 Route::get('/shop', function () {
     return view('pages.client.shop');
 });
