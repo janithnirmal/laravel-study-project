@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,13 @@ Route::get('/about', function () {
 Route::get('/admin', function () {
     return view('pages.admin.home');
 });
+
+
+
+
+// test
+
+Route::get('/get_product', [ProductController::class, 'index']);
+
+// all the controller route
+Route::resource('product', ProductController::class);
